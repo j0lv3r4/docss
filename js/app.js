@@ -39,7 +39,9 @@
 		},
 
 		crossDomainConfig: function(){
+			// Config Porthole for Safe CrossDomain Comunication
 			Porthole.trace("onload");
+
 	        // Create a proxy window to send to and receive 
 	        // messages from the iFrame
 	        windowProxy = new Porthole.WindowProxy(proxyGuest, 'guestFrame');
@@ -48,21 +50,26 @@
 	        windowProxy.addEventListener();
 		},
 
-		codeEditorConfig: function(){			
+		codeEditorConfig: function(){		
+
+			// Configuration for ACE editor	
             editors = {};
 
 	        editors['do-css'] = new ace.edit('edit-css');
 	        editors['do-html'] = new ace.edit('edit-html');
 
+	        // Get theme for CSS Editor
 	        editors['do-css'].setTheme("ace/theme/" + config.theme );
 	        editors['do-css'].getSession().setMode("ace/mode/css");
 
+	        // Get theme for HTML Editor
 	        editors['do-html'].setTheme("ace/theme/" + config.theme );
 	        editors['do-html'].getSession().setMode("ace/mode/html");
 
 	        docss = editors['do-css'];
             dohtml = editors['do-html'];
 
+            // Set the Font-Size from config
             dohtml.setFontSize(config.fontSize);
             docss.setFontSize(config.fontSize);
 		},
@@ -71,18 +78,23 @@
 			cssMSG = "/* Do your CSS here! */";
             htmlMSG = "<!-- Do your HTML here! -->";
 
+            // If the localStorage is empty then set the default msgs
             if (!localStorage.getItem('cssDB')) { localStorage.setItem('cssDB', cssMSG); }
             if (!localStorage.getItem('htmlDB')) { localStorage.setItem('htmlDB', htmlMSG); }
 
+            // Save the data on a object
             getCSSData = localStorage.getItem('cssDB');
             getHTMLData = localStorage.getItem('htmlDB');
 
+            // Send the data to the code editors
 	        docss.setValue(getCSSData);
             dohtml.setValue(getHTMLData);
 
+            // Set an option like overflow-x: break-word on the code editors
             dohtml.session.setUseWrapMode(true);
             docss.session.setUseWrapMode(true);
 
+            // This send the data to the iframe from the code editors when load the page
             windowProxy.post({'html' : getHTMLData });
             windowProxy.post({'css' : getCSSData });
 		},
@@ -98,6 +110,7 @@
 			this.getOption();
 		},
 
+		// Send the data to the iframe from the code editor when you are typing 
 		sendCode: function(from, lang) {
 			from.keyup(function() {
 				if (lang === 'html') {
@@ -112,6 +125,7 @@
 			});
 		},
 
+		// Send the helper option to the iframe
 		sendOption: function(option){
 			option.click(function(){
 				if (option === bootstrap) {
@@ -134,6 +148,7 @@
 			})
 		},
 
+		// Show the About section
 		showAbout: function(source){
 			source.click(function(){
 				if (source === close){
@@ -144,9 +159,12 @@
 			});
 		},
 
+		// This save the option you chosed when you leave and come back to the page
 		getOption: function(){
+			// Save the data on a obj
 			target = localStorage.getItem('option');
 
+			// I don't know how to use a var on the key so I had to do this
 			if (target === 'bootstrap'){
 				d = bootstrap;
 				windowProxy.post({ 'bootstrap' : target });
@@ -162,6 +180,10 @@
 				windowProxy.post({ 'none' : target });
 			}
 
+			// If is the first time you visit the page, set to none
+			if (!target) { d = none; }
+
+			// Get the option and add the class to the btn
 			all.removeClass('selected');	
 			d.addClass('selected');
 		}
