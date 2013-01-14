@@ -16,7 +16,6 @@
 		},
 
 		getElements: function(){
-
 			// crossdomain stuff
 			proxyGuest = "http://blogly.co/docss/proxy.html",
         	windowProxy = "",
