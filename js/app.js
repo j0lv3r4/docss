@@ -130,19 +130,19 @@
 				if (option === bootstrap) {
 					windowProxy.post({ 'bootstrap' : 'bootstrap' });
 					console.log('bootstrap');
-					localStorage.setItem('option', 'bootstrap');
+					localStorage['option'] = 'bootstrap';
 				}
 
 				if (option === normalize) {
 					windowProxy.post({ 'normalize' : 'normalize' });
 					console.log('normalize');
-					localStorage.setItem('option', 'normalize');
+					localStorage['option'] = 'normalize';
 				}
 
 				if (option === none) {
 					windowProxy.post({ 'none' : 'none' });
 					console.log('none');
-					localStorage.setItem('option', 'none');
+					localStorage['option'] = 'none';
 				}
 
 				all.removeClass('selected');
@@ -167,7 +167,7 @@
 
 			// Save the data on a obj
 			target = localStorage.getItem('option');
-			
+
 			// If is the first time you visit the page, set to none
 			if (!target) { d = none; }
 
