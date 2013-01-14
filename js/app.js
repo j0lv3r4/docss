@@ -163,7 +163,7 @@
 
 		// This save the option you chosed when you leave and come back to the page
 		getOption: function(){
-			d = "";
+			d = {};
 
 			// Save the data on a obj
 			target = localStorage.getItem('option');
