@@ -129,20 +129,20 @@
 			option.click(function(){
 				if (option === bootstrap) {
 					windowProxy.post({ 'bootstrap' : 'bootstrap' });
-					console.log('bootstrap');
-					localStorage['option'] = 'bootstrap';
+					console.log('Sending to iframe: bootstrap');
+					localStorage.setItem('option', 'bootstrap');
 				}
 
 				if (option === normalize) {
 					windowProxy.post({ 'normalize' : 'normalize' });
-					console.log('normalize');
-					localStorage['option'] = 'normalize';
+					console.log('Sending to iframe: normalize');
+					localStorage.setItem('option', 'normalize');
 				}
 
 				if (option === none) {
 					windowProxy.post({ 'none' : 'none' });
-					console.log('none');
-					localStorage['option'] = 'none';
+					console.log('Sending to iframe: none');
+					localStorage.setItem('option', 'none');
 				}
 
 				all.removeClass('selected');
