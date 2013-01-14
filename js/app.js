@@ -163,6 +163,11 @@
 
 		// This save the option you chosed when you leave and come back to the page
 		getOption: function(){
+			d = "";
+
+			// If is the first time you visit the page, set to none
+			if (!target) { d = none; }
+
 			// Save the data on a obj
 			target = localStorage.getItem('option');
 
@@ -181,9 +186,6 @@
 				d = none;
 				windowProxy.post({ 'none' : target });
 			}
-
-			// If is the first time you visit the page, set to none
-			if (!target) { d = none; }
 
 			// Get the option and add the class to the btn
 			all.removeClass('selected');	
