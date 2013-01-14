@@ -165,11 +165,11 @@
 		getOption: function(){
 			d = "";
 
-			// If is the first time you visit the page, set to none
-			if (!target) { d = none; }
-
 			// Save the data on a obj
 			target = localStorage.getItem('option');
+			
+			// If is the first time you visit the page, set to none
+			if (!target) { d = none; }
 
 			// I don't know how to use a var on the key so I had to do this
 			if (target === 'bootstrap'){
