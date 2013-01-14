@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>DOCSS - Do your CSS code online, quickly and add Bootstrap or Normalize to help you</title>
+        <meta name="description" content="DOCSS is a webapp to make your CSS code online, quickly and add Bootstrap or Normalize to help you">
+        <meta name="viewport" content="width=device-width">
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800' rel='stylesheet' type='text/css'>
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+
+    </head>
+    <body>
+        <header>
+
+            <div class="topbar clearfix">
+
+                <div class="logo">
+                    <h1 class="title">{ docss }</h1>
+                </div> <!-- end of logo -->
+
+                <nav role="navigation" class="navigation">
+                    <ul class="options">
+                        <li class="button bootsrap">bootstrap</li>
+                        <li class="button normalize">normalize</li>
+                        <li class="button none selected">none</li>
+                        <li class="button about-btn"><i class="icon-info-sign"></i> About</li>
+                    </ul>
+                </nav> <!-- end of options -->
+
+                <nav class="social">
+                    <ul>
+                        <li><a href="http://twitter.com/olverajuanluis" target="_blank" title="Follow Me!"><i class="icon-twitter"></i></a></li>
+                        <li><a href="https://github.com/thinkxl" target="_blank" title="See My Projects"><i class="icon-github-alt"></i></a></li>
+                        <li><a href="http://www.linkedin.com/in/juanolvera/" target="_blank" title="Hire me!"><i class="icon-linkedin-sign"></i></a></li>
+                    </ul>
+                </nav> <!-- end of social -->
+
+            </div><!-- end of topbar -->
+
+        </header>
+
+        <iframe id="guestFrame" name="guestFrame" src="http://blogly.co/docss/" width="100%" height="280px"></iframe> 
+
+        <pre id="edit-html"></pre>
+        <pre id="edit-css"></pre>
+        
+        
+        <div class="about">
+
+            <span class="close"><i class="icon icon-remove"></i></span>
+
+            <div class="about-content">
+                <h1 class="title">{ docss }</h1>
+
+                <p class="do">Do your CSS code online, quickly and add <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> or <a href="http://necolas.github.com/normalize.css/">Normalize</a> to help you.</p>
+
+                <p>This project is highly inspired on Lea Verou <a href="http://dabblet.com/">"Dabblet"</a>, so I just did it for educational purpose on my road to learn JavaScript.</p>
+
+                <p><strong>I couldn't have done any of this without:</strong></p> 
+                <ul class="credits">
+                    <li><a href="http://ternarylabs.github.com/porthole/">Porthole</a> Secure Cross Domain iFrame Communication</li> 
+                    <li><a href="http://ace.ajax.org/#nav=about">Ace</a> Code Editor for the Web</li> 
+                    <li><a href="http://leaverou.github.com/prefixfree/">-Prefix-Free</a> Break free from CSS prefix hell!</li>
+                </ul>
+            </div> <!-- end of about-content -->
+
+            <div class="autor">
+                <p><strong>{ docss }</strong> is a project by <a href="http://juanolvera.com">Juan Olvera</a> </p>
+            </div> <!-- end of autor -->
+
+        </div> <!-- end of about -->
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.js"><\/script>')</script>
+        <script src="js/porthole.js"></script>
+        <script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/app.js"></script>
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

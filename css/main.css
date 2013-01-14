@@ -1,0 +1,356 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* General Styles
+   ========================================================================== */
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body { 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400; }
+
+ul { 
+    padding: 0;
+    margin: 0; }
+
+ul li { list-style: none; }
+
+a { 
+    color: brown;
+    text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+/* Top Bar Styles
+   ========================================================================== */
+
+.topbar { 
+    height: 50px; 
+    color: #ccc;
+    padding-left: 25px;
+    background: url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/debut_dark.png'); }
+
+.logo { 
+    display: table;
+    float: left; }
+
+.title { 
+    color: #fff;
+    font-weight: 800;
+    display: inline-block;
+    margin: 0 25px 0 0; }
+
+.options { 
+    color: #fff;
+    display: inline-block;
+    margin-left: 25px; }
+
+nav { display: table; }
+
+nav ul li { 
+    margin-right: 5px;
+    display: block; 
+    float: left; }
+
+.navigation ul { margin-top: 10px; }
+
+.button {
+    text-transform: uppercase;
+    background: #ef4723;
+    padding: 2px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 0 brown; }
+
+.button:hover { background: #d83f20; }
+
+.button:active { 
+    margin-top: 2px;
+    box-shadow: 0 2px 0 brown; }
+
+.about-btn { margin-left: 25px; }
+
+.selected { 
+    margin-top: 2px;
+    background: #d83f20;
+    box-shadow: 0 2px 0 brown; }
+
+/* Social Styles
+   ========================================================================== */
+.social { 
+    margin-top: -35px;
+    font-size: 26px;
+    display: table;
+    float: right; }
+
+.social a { 
+    color: #fff;
+    text-decoration: none; }
+
+.social a:hover { color: #ccc; }
+
+/* About Styles
+   ========================================================================== */
+
+.do { 
+    font-weight: 800;
+    font-size: 24px; }
+
+.about { 
+    display: none;
+    text-align: center;
+    color: #555;
+    z-index: 10000;
+    color: #333;
+    top: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 600px;
+    height: auto;
+    background: #fff; 
+    position: absolute; 
+    border-radius: 4px;
+    border: 1px solid #ccc; }
+
+.about h1 {
+    font-size: 50px;
+    text-shadow: 1px 1px 1px brown;
+    color: #ef4723; }
+
+.about-content { 
+    padding: 20px; }
+
+.icon { margin-right: 5px; }
+
+.close { 
+    font-size: 18px;
+    color: brown;
+    cursor: pointer;
+    float: right; }
+
+.autor { 
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    background: #f1f1f1; }
+
+.autor p { 
+    margin-top: 0;
+    margin-bottom: 0; }
+
+/* Code Editor Styles
+   ========================================================================== */
+
+#edit-css, #edit-html {
+    box-shadow: 0 -5px 20px #999;
+    border-top: 5px solid #333;
+    overflow: auto;
+    position: absolute;
+    width: 50%;
+    height: 40%; 
+    bottom: 0; }
+
+#edit-css { right: 0; }
+
+/* Iframe Styles
+   ========================================================================== */
+
+iframe { 
+    margin: 25px 0 0 0;
+    padding: 0 25px;
+    border:none; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
