@@ -163,7 +163,8 @@
 
 		// This save the option you chosed when you leave and come back to the page
 		getOption: function(){
-
+			d = none;
+			
 			// Save the data on a obj
 			target = localStorage.getItem('option');
 
@@ -181,8 +182,7 @@
 				windowProxy.post({ 'normalize' : target });
 			}
 
-			if (target === 'none'){
-				d = none;
+			else {
 				windowProxy.post({ 'none' : target });
 			}
 
