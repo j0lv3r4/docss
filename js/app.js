@@ -116,17 +116,17 @@
 			option.click(function(){
 				if (option === bootstrap) {
 					windowProxy.post({ 'bootstrap' : 'bootstrap' });
-					// localStorage.setItem('option', 'bootstrap');
+					localStorage.setItem('option', 'bootstrap');
 				}
 
 				if (option === normalize) {
 					windowProxy.post({ 'normalize' : 'normalize' });
-					// localStorage.setItem('option', 'normalize');
+					localStorage.setItem('option', 'normalize');
 				}
 
 				if (option === none) {
 					windowProxy.post({ 'none' : 'none' });
-					// localStorage.setItem('option', 'none');
+					localStorage.setItem('option', 'none');
 				}
 
 				all.removeClass('selected');
