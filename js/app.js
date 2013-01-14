@@ -2,7 +2,7 @@
 
 	window.config = {
 		theme: 'tomorrow_night',
-		fontSize: '16px',
+		fontSize: '16px'
 	};
 
 	window.app = {
@@ -129,22 +129,25 @@
 			option.click(function(){
 				if (option === bootstrap) {
 					windowProxy.post({ 'bootstrap' : 'bootstrap' });
+					console.log('bootstrap');
 					localStorage.setItem('option', 'bootstrap');
 				}
 
 				if (option === normalize) {
 					windowProxy.post({ 'normalize' : 'normalize' });
+					console.log('normalize');
 					localStorage.setItem('option', 'normalize');
 				}
 
 				if (option === none) {
 					windowProxy.post({ 'none' : 'none' });
+					console.log('none');
 					localStorage.setItem('option', 'none');
 				}
 
 				all.removeClass('selected');
             	option.addClass('selected');
-			})
+			});
 		},
 
 		// Show the About section
@@ -187,7 +190,5 @@
 			d.addClass('selected');
 		}
 	};
-
-	app.init();
 
 })(jQuery);
