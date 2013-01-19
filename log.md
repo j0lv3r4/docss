@@ -7,3 +7,4 @@
 
 - when I erase something from the editors, the result doesn't
 - the page doesn't load the results from the localStorage
+- when the page loads doesn't call the option pressed

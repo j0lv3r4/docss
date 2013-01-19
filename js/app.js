@@ -9,7 +9,7 @@
 
 		init: function(){
 			this.getElements();
-			this.crossDomainConfig(); 
+			this.crossDomainConfig();
 			this.codeEditorConfig();
 			this.getLocalStorageData();
 			this.getEvents();
@@ -167,23 +167,27 @@
 
 			// Save the data on a obj
 			target = localStorage.getItem('option');
-			console.log('get Option:' + target);
 
 			// If is the first time you visit the page, set to none
-			if (!target) d = none; 
+			if (!target) { 
+				console.log('getOption: target empty');
+				d = none; }
 
 			// I don't know how to use a var on the key so I had to do this
-			 if (target === 'bootstrap'){
+			if (target === 'bootstrap'){
+				console.log('getOption: bootstrap');
 				d = bootstrap;
 				windowProxy.post({ 'bootstrap' : target });
 			}
 
 			if (target === 'normalize'){
+				console.log('getOption: normalize');
 				d = normalize;
 				windowProxy.post({ 'normalize' : target });
 			}
 
 			else {
+				console.log('getOption: none');
 				windowProxy.post({ 'none' : target });
 			}
 
