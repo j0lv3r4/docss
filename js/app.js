@@ -13,7 +13,6 @@
 			this.codeEditorConfig();
 			this.getLocalStorageData();
 			this.getEvents();
-			console.log('this is HTML': + getHTMLData);
 		},
 
 		getElements: function(){
