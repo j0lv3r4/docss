@@ -9,7 +9,7 @@
 
 		init: function(){
 			this.getElements();
-			this.crossDomainConfig();
+			this.crossDomainConfig(); 
 			this.codeEditorConfig();
 			this.getLocalStorageData();
 			this.getEvents();
@@ -169,12 +169,13 @@
 			target = localStorage.getItem('option');
 
 			// If is the first time you visit the page, set to none
-			if (!target) { 
-				console.log('getOption: target empty');
-				d = none; }
+			if (!target) d = none; 
+			
+			if (target === 'bootstrap') d = 'bootstrap'; 
+			if (target === 'normalize') d = 'normalize'; 
 
 			// I don't know how to use a var on the key so I had to do this
-			if (target === 'bootstrap'){
+			/* if (target === 'bootstrap'){
 				console.log('getOption: bootstrap');
 				d = bootstrap;
 				windowProxy.post({ 'bootstrap' : target });
@@ -189,7 +190,9 @@
 			else {
 				console.log('getOption: none');
 				windowProxy.post({ 'none' : target });
-			}
+			} */
+
+			window.post[target] = target;
 
 			// Get the option and add the class to the btn
 			all.removeClass('selected');	
