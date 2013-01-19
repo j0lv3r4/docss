@@ -13,15 +13,6 @@
 			this.codeEditorConfig();
 			this.getLocalStorageData();
 			this.getEvents();
-			this.testing();
-		},
-
-		testing: function(){
-			dohtml.on("change", console());
-
-			console = function(){
-				console.log('doing something');
-			}
 		},
 
 		getElements: function(){
