@@ -6,5 +6,5 @@
 ##BUGS
 
 - when I erase something from the editors, the result doesn't
-- the page doesn't load the results from the localStorage
+- the page doesn't load the results from the localStorage - Fixed ( I changed windowProxy.post({'html' : getHTMLData }); to windowProxy.post({'html' : localStorage.getItem('htmlDB') });)
 - when the page loads doesn't call the option pressed

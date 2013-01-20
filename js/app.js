@@ -177,18 +177,18 @@
 			if (target === 'bootstrap'){
 				console.log('getOption: bootstrap');
 				d = bootstrap;
-				windowProxy.post({ 'bootstrap' : target });
+				windowProxy.post({ 'bootstrap' : localStorage.getItem('option') });
 			}
 
 			if (target === 'normalize'){
 				console.log('getOption: normalize');
 				d = normalize;
-				windowProxy.post({ 'normalize' : target });
+				windowProxy.post({ 'normalize' : localStorage.getItem('option') });
 			}
 
 			else {
 				console.log('getOption: none');
-				windowProxy.post({ 'none' : target });
+				windowProxy.post({ 'none' : localStorage.getItem('option') });
 			}
 
 			// Get the option and add the class to the btn
