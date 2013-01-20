@@ -186,8 +186,9 @@
 				windowProxy.post({ 'normalize' : 'normalize' });
 			}
 
-			else {
+			if (target === 'none'){
 				console.log('getOption: none');
+				d = none;
 				windowProxy.post({ 'none' : 'none' });
 			}
 
