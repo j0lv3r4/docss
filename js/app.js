@@ -111,10 +111,18 @@
 		sendCode: function(from, lang) {
 			from.keyup(function() {
 				if (lang === 'html') {
+
+					// Get the code from Ace
 					getcode = dohtml.getSession().getValue();
+
+					// Send data to other domain iframe
 					windowProxy.post({'html' : getcode });
+
+					// Saving the code on localStorage named 'htmlDB'
 					localStorage.setItem('htmlDB', getcode);
-				} else {
+				} else { 
+					
+					// this for css
 					getcode = docss.getSession().getValue();
 					windowProxy.post({'css' : getcode });
 					localStorage.setItem('cssDB', getcode);
