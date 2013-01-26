@@ -94,6 +94,8 @@
             docss.session.setUseWrapMode(true);
 
             // This send the data to the iframe from the code editors when load the page
+            windowProxy.post({'html' : localStorage.getItem('htmlDB') });
+            windowProxy.post({'css' : localStorage.getItem('cssDB') });
 		},
 
 		getEvents: function() {
@@ -121,7 +123,7 @@
 					// Saving the code on localStorage named 'htmlDB'
 					localStorage.setItem('htmlDB', getcode);
 				} else { 
-					
+
 					// this for css
 					getcode = docss.getSession().getValue();
 					windowProxy.post({'css' : getcode });
