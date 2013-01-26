@@ -94,8 +94,6 @@
             docss.session.setUseWrapMode(true);
 
             // This send the data to the iframe from the code editors when load the page
-            windowProxy.post({'html' : localStorage.getItem('htmlDB') });
-            windowProxy.post({'css' : localStorage.getItem('cssDB') });
 		},
 
 		getEvents: function() {
