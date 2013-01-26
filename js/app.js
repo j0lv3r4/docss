@@ -2,7 +2,7 @@
 
 	window.config = {
 		theme: 'tomorrow_night',
-		fontSize: '16px'
+		fontSize: '14px'
 	};
 
 	window.app = {
