@@ -8,14 +8,14 @@
 	window.app = {
 
 		init: function(){
-			this.getElements();
+			this.cacheElements();
 			this.crossDomainConfig();
 			this.codeEditorConfig();
 			this.getLocalStorageData();
 			this.getEvents();
 		},
 
-		getElements: function(){
+		cacheElements: function(){
 			// crossdomain stuff
 			proxyGuest = "http://blogly.co/docss/proxy.html",
         	windowProxy = "",
