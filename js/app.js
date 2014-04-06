@@ -18,7 +18,7 @@
 		cacheElements: function(){
 			// crossdomain stuff
 			proxyGuest = "http://webcode.cc/blogly.co/docss/proxy.html",
-        	windowProxy = "",
+			windowProxy = "",
 
         	// code editor stuff
             editCSS = $('pre#edit-css'),
@@ -52,10 +52,10 @@
 		codeEditorConfig: function(){		
 
 			// Configuration for ACE editor	
-            editors = {};
-
-	        editors['do-css'] = new ace.edit('edit-css');
-	        editors['do-html'] = new ace.edit('edit-html');
+            editors = {
+            	'do-css' : new ace.edit('edit-css'),
+            	'do-html' : new ace.edit('edit-html')
+            };
 
 	        // Get theme for CSS Editor
 	        editors['do-css'].setTheme("ace/theme/" + config.theme );
