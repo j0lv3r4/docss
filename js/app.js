@@ -17,7 +17,7 @@
 
 		cacheElements: function(){
 			// crossdomain stuff
-			proxyGuest = "http://webcode.cc/proxy.html",
+			proxyGuest = "http://webcode.cc/blogly.co/docss/proxy.html",
         	windowProxy = "",
 
         	// code editor stuff
